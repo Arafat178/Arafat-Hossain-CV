@@ -1,0 +1,274 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Main Container */
+.resume-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Left Column */
+.left-column {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 30px;
+    width: 35%;
+}
+
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    object-fit: cover;
+}
+
+.left-column h2 {
+    color: #fff;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.contact-info p, .awards p {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #3498db;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #3498db;
+}
+
+.skills ul, .certifications ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #bdc3c7;
+    font-size: 1em;
+}
+
+.skills li {
+    background: #34495e;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+.skills li:hover {
+    background: #3498db;
+    color: #fff;
+    transform: scale(1.03);
+}
+
+/* Right Column */
+.right-column {
+    padding: 40px;
+    width: 65%;
+}
+
+.header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #3498db;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #2c3e50;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #555;
+    font-weight: 400;
+}
+
+.right-column .section {
+    margin-bottom: 30px;
+}
+
+.right-column .section:last-child {
+    margin-bottom: 0;
+}
+
+.right-column h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.project-item, .experience-item, .education-item {
+    margin-bottom: 20px;
+}
+
+.project-item h3, .experience-item h3, .education-item h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #3498db;
+}
+
+.experience-item p, .education-item p {
+    margin: 0 0 5px 0;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.download-btn {
+    margin-top: 30px;
+}
+
+.download-btn a {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.download-btn a:hover {
+    background: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* only for print*/
+@media print {
+    body {
+        -webkit-print-color-adjust: exact; /* Chrome */
+        print-color-adjust: exact;         /* Firefox */
+        background: #fff !important;
+    }
+
+    .resume-container {
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+    }
+
+    .download-btn {
+        display: none; /* Download button hide in PDF */
+    }
+}
+
+/* for certificate */
+.cert-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(90deg, rgba(52,152,219,0.04), rgba(52,152,219,0.01));
+    border: 1px solid rgba(52,152,219,0.06);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* left block for title/meta */
+.cert-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* right block for verify link */
+.cert-right {
+    display: flex;
+    align-items: center;
+}
+
+.verify-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #3498db;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    box-shadow: 0 2px 6px rgba(52,152,219,0.18);
+}
+
+.verify-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(52,152,219,0.22);
+}
+
+/* small icon tweak (uses Font Awesome already linked) */
+.verify-link i {
+    font-size: 0.75em;
+    opacity: 0.95;
+}
+
+/* responsive: make sure layout stacks nicely on small screens */
+@media (max-width: 600px) {
+    .cert-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cert-right {
+        margin-top: 8px;
+        width: 100%;
+    }
+    .verify-link { width: 140px; justify-content: center; }
+}
